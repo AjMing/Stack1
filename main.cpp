@@ -1,20 +1,24 @@
 #include <iostream>
 using namespace std;
+
 struct NODE{
 	 int data;
 	NODE *nextPtr;
 };
 typedef NODE* NodePtr;
+
 struct Stack{
-    NodePtr top;
-    int size;
+  NodePtr top;
+  int size;
+
 };
 
-void push(Stack &, int x);
+void push(Stack &, int );
 int pop(Stack & );
 
 int main() {
-   NodePtr top=NULL; //top of your stack
+   Stack s;//top of your stack
+   
   push(top,5);
   push(top,11);
   push(top,12);
@@ -42,13 +46,13 @@ void push(Stack &s, int x){
 
 int pop(Stack &s){
 
-  if(top){ // if(top!=NULL)
- 	  NodePtr t =top;
+  if(s.size>0){ // if(top!=NULL)
+ 	  NodePtr t =s.top;
 		int value;		
 	
 		value=t->data;
-		top=t->nextPtr;
-		
+		s.top =t->nextPtr;
+		s.size--;
     delete t; 			
 		return value;
   }
