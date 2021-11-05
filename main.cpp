@@ -18,19 +18,21 @@ int pop(Stack & );
 
 int main() {
    Stack s;//top of your stack
-   
-  push(top,5);
-  push(top,11);
-  push(top,12);
-  cout<< pop(top)<<endl;
-  cout<< pop(top)<<endl;
-  push(top,7);
-   push(top,8);
-  cout<< pop(top)<<endl;
-  cout<< pop(top)<<endl;
-  push(top,18);
-  cout<< pop(top)<<endl;
-  cout<< pop(top)<<endl;
+   s.size=0;
+   s.top=NULL;
+
+  push(s,5);
+  push(s,11);
+  push(s,12);
+  cout<< pop(s)<<endl;
+  cout<< pop(s)<<endl;
+  push(s,7);
+   push(s,8);
+  cout<< pop(s)<<endl;
+  cout<< pop(s)<<endl;
+  push(s,18);
+  cout<< pop(s)<<endl;
+  cout<< pop(s)<<endl;
 } 
 
 void push(Stack &s, int x){
